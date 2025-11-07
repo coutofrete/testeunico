@@ -1,10 +1,13 @@
-# Desliga todas as fases
--dontshrink
--dontoptimize
--dontobfuscate
+-keep class kotlin.coroutines.**
+-keep class kotlinx.coroutines.**
 
-# (Opcional) garante que nada seja removido
--keep class ** { *; }
+-keep class com.facetec.sdk.** { *; }
+-keep class com.acesso.acessobio_android.** { *; }
+-keep class io.unico.** { *; }
 
-# (Opcional) preserva metadados úteis
--keepattributes *
+-keep class br.com.makrosystems.haven.** { *; }
+-keep class HavenSDK.**{ *; }
+-keep class HavenSDK** { *; }
+
+-dontwarn kotlinx.parcelize.Parcelize
+-dontwarn org.slf4j.impl.StaticMDCBinder
